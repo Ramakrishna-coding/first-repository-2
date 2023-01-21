@@ -109,7 +109,7 @@ app.get("/todos/:todoId/", async (request, response) => {
 
 // create a todo
 app.post("/todos/", async (request, response) => {
-  const { todo, priority, status } = request.body;
+  const { id, todo, priority, status } = request.body;
   const createATodoQuery = `
         INSERT INTO
             todo (todo, priority, status)
